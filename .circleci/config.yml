@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-     machine:
+    machine:
       enabled: true
       # Use Ubuntu 14.04 with bleeding edge Docker daemon 17.06.0-ce.
       image: ubuntu-2004:202201-02  
