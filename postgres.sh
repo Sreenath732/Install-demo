@@ -8,11 +8,7 @@ sudo curl -L https://packagecloud.io/timescale/timescaledb/gpgkey | sudo apt-key
 
 sudo sh -c "echo 'deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main' > /etc/apt/sources.list.d/timescaledb.list"
 
-sudo -i
-
-wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | apt-key add -
-
-exit
+su -c 'wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | apt-key add -' root
 
 sudo apt update
 
