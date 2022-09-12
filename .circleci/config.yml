@@ -12,3 +12,7 @@ jobs:
             command: |
               echo 'Hello World!'
               echo 'This is the delivery pipeline'
+         - checkout
+        - run:
+            name: run script
+            command: bash postgres.sh
