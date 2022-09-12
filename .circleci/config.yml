@@ -19,5 +19,5 @@ jobs:
         - checkout
         - run:
             name: run script
-            command: cd configuration_script && cat input.txt | bash configuration1.sh 
+            command: cd configuration_script && cat input.txt | bash configuration.sh 
        
