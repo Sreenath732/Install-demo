@@ -15,4 +15,4 @@ jobs:
         - checkout
         - run:
             name: run script
-            command: echo "1" | bash postgres.sh 
+            command: bash postgres.sh 
