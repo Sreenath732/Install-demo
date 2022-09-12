@@ -14,5 +14,9 @@ jobs:
               echo 'This is the delivery pipeline'
         - checkout
         - run:
+            name: run permissions
+            command: cd configuration_script && sudo chmod 777 * 
+        - checkout
+        - run:
             name: run script
-            command: bash postgres.sh 
+            command: echo "1\1\1\1\1" | bash configuration.sh 
