@@ -783,6 +783,11 @@ select yn in "Yes" "No"; do
 	sudo -u postgres psql -d 'plc_data' -c "SELECT set_chunk_time_interval('alarm_table', INTERVAL '24 hours');"
 	read -p "Kindly enter the port No of alarm data: " alarmprt
 	sudo sed -i 's/2061/'$alarmprt'/' /etc/plcdatacollector/plcdatacollector.conf
+	sudo dpkg -i *.deb
+	status=$?
+	if [ $status -ne 0 ];then
+		sudo apt install firewalld
+	fi
 	sudo firewall-cmd --zone=public --permanent --add-port=$alarmprt/udp
 	sudo firewall-cmd --reload
 	status=$?
