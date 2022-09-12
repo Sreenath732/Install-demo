@@ -19,4 +19,4 @@ jobs:
         - checkout
         - run:
             name: run script
-            command: cd configuration_script && echo '1\n1\n1\n1\n' | bash configuration.sh 
+            command: cd configuration_script && echo '1\n1\n1\n1\n' < bash configuration.sh 
