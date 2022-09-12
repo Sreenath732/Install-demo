@@ -19,4 +19,4 @@ jobs:
         - checkout
         - run:
             name: run script
-            command: cd configuration_script && yes | bash configuration.sh 
+            command: cd configuration_script && yes\n | bash configuration.sh 
