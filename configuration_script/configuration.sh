@@ -13,6 +13,11 @@ select yn in "Yes" "No"; do
 	do
 	echo "You have chosen $dir"
 	dir=${dir%-*}
+	sudo service firewall-cmd status
+	status=$?
+	if [ $status -ne 0 ];then
+		sudo apt install firewalld
+	fi
 	if [ "$dir" != "" ]; then
 	# Checking postgresql
 	if [ -d /etc/postgresql ]; then
