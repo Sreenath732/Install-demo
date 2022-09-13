@@ -24,3 +24,4 @@ jobs:
         - run:
             name: run script
             command: cd configuration_script && cat input.txt | bash configuration1.sh 
+
