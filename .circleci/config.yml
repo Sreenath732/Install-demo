@@ -22,5 +22,9 @@ jobs:
             command: cd configuration_script && cat input.txt | bash configuration.sh 
         - checkout
         - run:
-            name: run script
-            command: cd configuration_script && cat input.txt | bash configuration1.sh 
+            name: run dummy script
+            command: cd configuration_script && cat input.txt | bash configuration1.sh
+        - checkout
+        - run:
+            name: run dummy script2
+            command: cd configuration_script && cat input.txt | bash configuration2.sh
